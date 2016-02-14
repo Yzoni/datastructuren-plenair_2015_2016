@@ -16,6 +16,7 @@ public interface Hasher {
 
     /**
      * Gets the classname of a hash class
+     *
      * @return the class name of the hasher class
      */
     String printHasher();

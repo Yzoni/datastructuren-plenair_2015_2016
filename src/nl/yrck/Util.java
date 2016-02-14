@@ -41,6 +41,7 @@ public class Util {
 
     /**
      * Gets the paths of all files in a directory
+     *
      * @param dir a directory containing files
      * @return an array of Path of all the file files in a directory. Returns null when pathname doesn't denote a
      * directory or when an I/O error occurred.

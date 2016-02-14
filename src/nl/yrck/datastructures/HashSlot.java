@@ -20,6 +20,7 @@ public class HashSlot {
 
     /**
      * Getter for key
+     *
      * @return the key
      */
     public String getKey() {

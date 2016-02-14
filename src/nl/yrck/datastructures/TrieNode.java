@@ -30,6 +30,7 @@ public class TrieNode {
 
     /**
      * Getter for character saved in node
+     *
      * @return gets character
      */
     public char getaChar() {
@@ -38,6 +39,7 @@ public class TrieNode {
 
     /**
      * Getter for the next node that contains a specific character
+     *
      * @param aChar character to search for
      * @return the nextnode if the node is found, else returns null
      */
@@ -54,6 +56,7 @@ public class TrieNode {
 
     /**
      * Setter for the next node
+     *
      * @param aChar the character to save in the node
      */
     public void setNewNextNode(char aChar) {

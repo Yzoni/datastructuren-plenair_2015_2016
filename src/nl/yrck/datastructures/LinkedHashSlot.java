@@ -1,7 +1,7 @@
 package nl.yrck.datastructures;
 
 /**
- * This class saves a string but also contains a reference to the next slot containing a string.
+ * This class saves a string, but also contains a reference to the next slot containing a string. Acts as a linked list.
  *
  * @author Yorick de Boer
  */
@@ -21,6 +21,7 @@ public class LinkedHashSlot extends HashSlot {
 
     /**
      * Getter for the next linkedslot
+     *
      * @return the next linkedslot
      */
     public LinkedHashSlot getNextSlot() {
@@ -29,6 +30,7 @@ public class LinkedHashSlot extends HashSlot {
 
     /**
      * Setter for the next slot
+     *
      * @param nextSlot a linked slot
      */
     public void setNextSlot(LinkedHashSlot nextSlot) {

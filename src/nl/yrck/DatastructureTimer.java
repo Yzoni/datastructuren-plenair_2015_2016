@@ -32,6 +32,7 @@ public class DatastructureTimer {
     /**
      * Computes the time it takes to lookup all words in a datastructure. It also counts the amount of correct
      * and incorrect words
+     *
      * @param path path to the test file
      * @return words in dictionary, words not in dictionary, delta time in milliseconds
      */

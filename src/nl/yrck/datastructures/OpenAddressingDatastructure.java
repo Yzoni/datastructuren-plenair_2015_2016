@@ -26,6 +26,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Contstructor for OpenAddressing datastructure
+     *
      * @param hasher the hasher to use
      */
     public OpenAddressingDatastructure(Hasher hasher) {
@@ -34,6 +35,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Contstructor for OpenAddressing datastructure
+     *
      * @param hasher the hasher to use
      * @param loadFactor the maximal loadfactor
      */
@@ -43,6 +45,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Contstructor for OpenAddressing datastructure
+     *
      * @param initialTableSize initial table size
      * @param hasher the hasher to use
      * @param loadFactor the maximal loadfactor
@@ -59,6 +62,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Checks if a string is saved in the datastructure
+     *
      * @param key the string to check against the datastructure
      * @return true if the string is found and false when the string does not appear in the datastructure
      */
@@ -79,6 +83,7 @@ public class OpenAddressingDatastructure implements Datastructure {
     /**
      * Saves a string in the datastructure. Checks before insertion whether the datastructure exceeds its load factor.
      * When the datastructure exceeds this loadfactor the datastructure will resize and rehash all its entries.
+     *
      * @param key the string to save
      */
     @Override
@@ -93,6 +98,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Gets the total size of the datastructure, also includes not used entries
+     *
      * @return the size of the datastructure
      */
     @Override
@@ -102,6 +108,7 @@ public class OpenAddressingDatastructure implements Datastructure {
 
     /**
      * Tries to find a free slot by using linear probing.
+     *
      * @param key the to be inserted key
      * @param hashSlots the hashtable
      * @return a hash unique to the hashtable hash
@@ -119,6 +126,7 @@ public class OpenAddressingDatastructure implements Datastructure {
     /**
      * Checks if the loadfactor is exceeded.
      * @return true if the loadfactor is exceeded otherwise false
+     *
      */
     private boolean exceedsLoadFactor() {
         int load = Math.round(fillCount / tableSize);

@@ -32,6 +32,7 @@ public class CollisionChainingDatastructure implements Datastructure {
 
     /**
      * Construcotr for Collision Chaining datastructure
+     *
      * @param tableSize the initial table size
      * @param hasher the hasher to use
      */
@@ -46,6 +47,7 @@ public class CollisionChainingDatastructure implements Datastructure {
 
     /**
      * Checks if a string is saved in the datastructure
+     *
      * @param key the string to check against the datastructure
      * @return true if the string is found and false when the string does not appear in the datastructure
      */
@@ -63,7 +65,8 @@ public class CollisionChainingDatastructure implements Datastructure {
     }
 
     /**
-     * Saves a string in the datastructure
+     * Saves a string in the datastructure, if the hash isn't free append to linked list
+     *
      * @param key the string to save
      */
     @Override
@@ -82,6 +85,7 @@ public class CollisionChainingDatastructure implements Datastructure {
 
     /**
      * Gets the total size of the datastructure, also includes not used entries
+     *
      * @return the size of the datastructure
      */
     @Override

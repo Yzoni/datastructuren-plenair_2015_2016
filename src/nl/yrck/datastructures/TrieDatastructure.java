@@ -36,6 +36,7 @@ public class TrieDatastructure implements Datastructure {
 
     /**
      * Saves a string in the datastructure
+     *
      * @param key the string to save
      */
     @Override
@@ -51,6 +52,7 @@ public class TrieDatastructure implements Datastructure {
 
     /**
      * Gets the total size of the datastructure, also includes not used entries
+     *
      * @return the size of the datastructure
      */
     @Override

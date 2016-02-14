@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * This is the main class. Which performs the benchmarking of the different datastrucutures.
+ * This is the main class. Which performs benchmarks of different datastrucutures.
  *
  * @author Yorick de Boer
  */
@@ -46,7 +46,7 @@ public class Benchmark {
     }
 
     /**
-     * Saves the performance results and meta data from different datastructures to csv file
+     * Saves the performance results and meta data from different datastructures to a csv file
      *
      * @param exportPath path to the csv file
      */
@@ -107,17 +107,17 @@ public class Benchmark {
     }
 
     private void makePrintable(BufferedWriter writer, DatastructureBuilder datastructureBuilder, String hashtype,
-                               int tableSize)
-            throws IOException {
+                               int tableSize) throws IOException {
         double[] timeResults = new double[sampleLists.length + 1];
         int currentFile;
         for (int i = 0; i < sampleLists.length; i++) {
             int[] arrayResults = datastructureBuilder.timer(sampleLists[i]);
+            // Calculate words / ms
             double normalizedResult = (double) (Util.countWordList(sampleLists[i]) + 1) / (double) arrayResults[2];
             timeResults[i] = normalizedResult;
-            currentFile = i + 1;
+            currentFile = i + 1; // First file is count 1
             System.out.println("Status: " + datastructureBuilder.printName() + " file (" + currentFile +
-                    "/" + sampleLists.length + "); time: " + normalizedResult);
+                    "/" + sampleLists.length + "); time: " + normalizedResult + "words/ms");
         }
         double averageArray = Util.calculateAverage(timeResults);
         createCSVLine(writer, datastructureBuilder.printName(), hashtype, tableSize, averageArray);

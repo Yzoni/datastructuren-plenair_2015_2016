@@ -36,6 +36,7 @@ public class DatastructureBuilder {
 
     /**
      * Reads in a wordlist, line by line and returns the datastructure
+     *
      * @return datastructure
      */
     private Datastructure readInWordList() {
@@ -58,6 +59,7 @@ public class DatastructureBuilder {
 
     /**
      * Returns the name of a datastructure
+     *
      * @return the name of the datastructure
      */
     public String printName() {
@@ -66,6 +68,7 @@ public class DatastructureBuilder {
 
     /**
      * Adds a timer to the datastructure
+     *
      * @param file path to a test file
      * @return a datastructure timer
      */

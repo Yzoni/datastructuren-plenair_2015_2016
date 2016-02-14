@@ -16,12 +16,14 @@ public interface Datastructure {
 
     /**
      * Saves a string in the datastructure
+     *
      * @param key the string to save
      */
     void put(String key);
 
     /**
      * Gets the total size of the datastructure, also includes not used entries
+     *
      * @return the size of the datastructure
      */
     int size();
