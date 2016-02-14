@@ -68,7 +68,7 @@ public class OpenAddressingDatastructure implements Datastructure {
      */
     @Override
     public boolean contains(String key) {
-        int hash = Math.abs(hasher.doHash(key)) % tableSize;
+        int hash = hasher.doHash(key) % tableSize;
         HashSlot slot = hashTable[hash];
         while (!(slot == null || slot.getKey().equals(key))) {
             hash = (hash + 1) % tableSize;
@@ -114,7 +114,7 @@ public class OpenAddressingDatastructure implements Datastructure {
      * @return a hash unique to the hashtable hash
      */
     private int findHashSlot(String key, HashSlot[] hashSlots) {
-        int hash = Math.abs(hasher.doHash(key)) % tableSize;
+        int hash = hasher.doHash(key) % tableSize;
         HashSlot slot = hashSlots[hash];
         while (!(slot == null || slot.getKey().equals(key))) {
             hash = (hash + 1) % tableSize;

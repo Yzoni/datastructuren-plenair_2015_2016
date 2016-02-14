@@ -21,7 +21,7 @@ public class Benchmark {
     private static final String EXPORTPATH = "benchmark_results.csv";
 
     private static final String DEFAULTHASHER = "defaulthasher";
-    private static final String ALTERNATIVEHASHER = "alternativehasher";
+    private static final String ALTERNATIVEHASHER = "djb2hasher";
 
     private Path dictionaryList;
     private Path[] sampleLists;
@@ -39,6 +39,7 @@ public class Benchmark {
 
         // Checks correctness of datastructures
         benchmark.benchmark(Util.countWordList(dictionaryList), new DefaultHasher(), 0.8f);
+        benchmark.benchmark(Util.countWordList(dictionaryList), new Djb2Hasher(), 0.8f);
 
         // Saves benchmark results to csv file
         Path benchmarkResults = Paths.get(EXPORTPATH);
@@ -80,10 +81,13 @@ public class Benchmark {
         }
 
         // Benchmark alternative hasher
-        DatastructureBuilder openAddressingHashtableBuilderAlternativeHasher =
-                new DatastructureBuilder(dictionaryList, new OpenAddressingDatastructure(new AlternativeHasher()));
-        makePrintable(bufferedWriter, openAddressingHashtableBuilderAlternativeHasher, ALTERNATIVEHASHER,
-                Util.countWordList(dictionaryList));
+        for (int tableSize = Util.countWordList(dictionaryList); tableSize < (Util.countWordList(dictionaryList) * 2.5);
+             tableSize += 50000) {
+            DatastructureBuilder openAddressingHashtableBuilderDefaultHasher =
+                    new DatastructureBuilder(dictionaryList, new OpenAddressingDatastructure(
+                            new Djb2Hasher()));
+            makePrintable(bufferedWriter, openAddressingHashtableBuilderDefaultHasher, ALTERNATIVEHASHER, tableSize);
+        }
     }
 
     private void benchmarkCollisionChainingHashtable(BufferedWriter bufferedWriter) throws IOException {
@@ -95,9 +99,12 @@ public class Benchmark {
             makePrintable(bufferedWriter, collisionChainingHashtableBuilder, DEFAULTHASHER, tableSize);
         }
         // Benchmark alternative hasher
-        DatastructureBuilder collisionChainingHashtableBuilder =
-                new DatastructureBuilder(dictionaryList, new CollisionChainingDatastructure(new AlternativeHasher()));
-        makePrintable(bufferedWriter, collisionChainingHashtableBuilder, ALTERNATIVEHASHER, 255);
+        for (int tableSize = 1; tableSize < (Util.countWordList(dictionaryList) * 2.5); tableSize += 50000) {
+            DatastructureBuilder collisionChainingHashtableBuilder =
+                    new DatastructureBuilder(dictionaryList, new CollisionChainingDatastructure(new DefaultHasher(),
+                            tableSize));
+            makePrintable(bufferedWriter, collisionChainingHashtableBuilder, ALTERNATIVEHASHER, tableSize);
+        }
     }
 
     private void benchmarkTrie(BufferedWriter bufferedWriter) throws IOException {
@@ -125,9 +132,9 @@ public class Benchmark {
 
     private void createCSVLine(BufferedWriter writer, String datastructure, String hasher, int tableSize,
                                double timeResult) throws IOException {
-        System.out.println(datastructure + "," + hasher + "," + String.valueOf(tableSize) + "," +
+        System.out.println(datastructure + ";" + hasher + ";" + String.valueOf(tableSize) + ";" +
                 String.valueOf(timeResult));
-        writer.write(datastructure + "," + hasher + "," + String.valueOf(tableSize) + "," + String.valueOf(timeResult));
+        writer.write(datastructure + ";" + hasher + ";" + String.valueOf(tableSize) + ";" + String.valueOf(timeResult));
         writer.newLine();
         writer.flush();
     }

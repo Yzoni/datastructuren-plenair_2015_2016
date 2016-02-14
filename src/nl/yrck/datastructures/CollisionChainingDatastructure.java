@@ -53,7 +53,7 @@ public class CollisionChainingDatastructure implements Datastructure {
      */
     @Override
     public boolean contains(String key) {
-        int hash = Math.abs(hasher.doHash(key)) % tableSize;
+        int hash = hasher.doHash(key) % tableSize;
         LinkedHashSlot slot = hashTable[hash];
         while (!(slot == null || slot.getKey().equals(key))) {
             slot = slot.getNextSlot();
@@ -71,7 +71,7 @@ public class CollisionChainingDatastructure implements Datastructure {
      */
     @Override
     public void put(String key) {
-        int hash = Math.abs(hasher.doHash(key)) % tableSize;
+        int hash = hasher.doHash(key) % tableSize;
         LinkedHashSlot slot = hashTable[hash];
         if (slot != null) {
             while (!(slot.getNextSlot() == null || slot.getKey().equals(key))) {

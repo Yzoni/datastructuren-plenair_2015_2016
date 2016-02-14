@@ -15,7 +15,7 @@ public class DefaultHasher implements Hasher {
      */
     @Override
     public int doHash(String word) {
-        return word.hashCode();
+        return Math.abs(word.hashCode());
     }
 
     /**
