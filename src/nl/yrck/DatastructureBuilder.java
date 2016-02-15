@@ -1,6 +1,6 @@
 package nl.yrck;
 
-import nl.yrck.datastructures.Datastructure;
+import nl.yrck.datastructures.MyDatastructure;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -19,7 +19,7 @@ import java.nio.file.Path;
  */
 public class DatastructureBuilder {
 
-    private Datastructure datastructure;
+    private MyDatastructure myDatastructure;
     private Path path;
 
     /**
@@ -28,10 +28,10 @@ public class DatastructureBuilder {
      * @param path      path to a list of words, words seperated by a new line
      * @param hashtable datastructure which implements the datastructure interface
      */
-    DatastructureBuilder(Path path, Datastructure hashtable) {
+    DatastructureBuilder(Path path, MyDatastructure hashtable) {
         this.path = path;
-        this.datastructure = hashtable;
-        this.datastructure = readInWordList();
+        this.myDatastructure = hashtable;
+        this.myDatastructure = readInWordList();
     }
 
     /**
@@ -39,7 +39,7 @@ public class DatastructureBuilder {
      *
      * @return datastructure
      */
-    private Datastructure readInWordList() {
+    private MyDatastructure readInWordList() {
         try {
             FileInputStream input = new FileInputStream(path.toFile());
             CharsetDecoder decoder = StandardCharsets.UTF_8.newDecoder();
@@ -48,13 +48,13 @@ public class DatastructureBuilder {
             BufferedReader bufferedReader = new BufferedReader(reader);
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                datastructure.put(line);
+                myDatastructure.put(line);
             }
             bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return datastructure;
+        return myDatastructure;
     }
 
     /**
@@ -63,7 +63,7 @@ public class DatastructureBuilder {
      * @return the name of the datastructure
      */
     public String printName() {
-        return datastructure.getClass().getSimpleName();
+        return myDatastructure.getClass().getSimpleName();
     }
 
     /**
@@ -72,7 +72,7 @@ public class DatastructureBuilder {
      * @param file path to a test file
      * @return a datastructure timer
      */
-    int[] timer(Path file) {
-        return new DatastructureTimer(datastructure).timer(file);
+    long[] timer(Path file) {
+        return new DatastructureTimer(myDatastructure).timer(file);
     }
 }

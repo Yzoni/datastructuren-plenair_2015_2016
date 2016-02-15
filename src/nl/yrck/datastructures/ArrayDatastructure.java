@@ -9,7 +9,7 @@ package nl.yrck.datastructures;
  *
  * @author Yorick de Boer
  */
-public class ArrayDatastructure implements Datastructure {
+public class ArrayDatastructure implements MyDatastructure {
 
     private String[] array;
     private int currentUsedSize;

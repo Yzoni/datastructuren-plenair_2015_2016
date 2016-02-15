@@ -8,7 +8,7 @@ package nl.yrck.datastructures;
  *
  * @author Yorick de Boer
  */
-public class CollisionChainingDatastructure implements Datastructure {
+public class CollisionChainingDatastructure implements MyDatastructure {
 
     private LinkedHashSlot[] hashTable;
     private int tableSize;

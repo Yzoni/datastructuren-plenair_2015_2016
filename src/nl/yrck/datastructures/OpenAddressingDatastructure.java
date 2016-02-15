@@ -9,7 +9,7 @@ package nl.yrck.datastructures;
  *
  * @author Yorick de Boer
  */
-public class OpenAddressingDatastructure implements Datastructure {
+public class OpenAddressingDatastructure implements MyDatastructure {
 
     HashSlot[] hashTable;
     private int tableSize;

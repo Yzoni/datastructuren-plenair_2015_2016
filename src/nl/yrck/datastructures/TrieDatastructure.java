@@ -5,7 +5,7 @@ package nl.yrck.datastructures;
  *
  * @author Yorick de Boer
  */
-public class TrieDatastructure implements Datastructure {
+public class TrieDatastructure implements MyDatastructure {
 
     TrieNode rootNode;
 

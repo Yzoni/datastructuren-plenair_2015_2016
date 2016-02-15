@@ -5,7 +5,7 @@ package nl.yrck.datastructures;
  *
  * @author Yorick de Boer
  */
-public interface Datastructure {
+public interface MyDatastructure {
     /**
      * Checks if a string is saved in the datastructure
      *

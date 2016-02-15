@@ -1,6 +1,6 @@
 package nl.yrck;
 
-import nl.yrck.datastructures.Datastructure;
+import nl.yrck.datastructures.MyDatastructure;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,15 +18,15 @@ import java.nio.file.Path;
  */
 public class DatastructureTimer {
 
-    Datastructure datastructure;
+    MyDatastructure myDatastructure;
 
     /**
      * Constructor for datastrucure timer
      *
-     * @param datastructure datastructure which implements the datastructure interface
+     * @param myDatastructure datastructure which implements the datastructure interface
      */
-    public DatastructureTimer(Datastructure datastructure) {
-        this.datastructure = datastructure;
+    public DatastructureTimer(MyDatastructure myDatastructure) {
+        this.myDatastructure = myDatastructure;
     }
 
     /**
@@ -34,12 +34,12 @@ public class DatastructureTimer {
      * and incorrect words
      *
      * @param path path to the test file
-     * @return words in dictionary, words not in dictionary, delta time in milliseconds
+     * @return words in dictionary, words not in dictionary, delta time in nanoseconds
      */
-    public int[] timer(Path path) {
-        int countRight = 0;
-        int countWrong = 0;
-        long startTime = System.currentTimeMillis();
+    public long[] timer(Path path) {
+        long countRight = 0;
+        long countWrong = 0;
+        long startTime = System.nanoTime();
 
         try {
             FileInputStream input = new FileInputStream(path.toFile());
@@ -59,10 +59,10 @@ public class DatastructureTimer {
             e.printStackTrace();
         }
 
-        long stopTime = System.currentTimeMillis();
-        int deltaTime = (int) (stopTime - startTime);
+        long stopTime = System.nanoTime();
+        long deltaTime = (stopTime - startTime);
 
-        return new int[]{countRight, countWrong, deltaTime};
+        return new long[]{countRight, countWrong, deltaTime};
     }
 
     /**
@@ -72,6 +72,6 @@ public class DatastructureTimer {
      * @return true if the datastructure contains the word
      */
     boolean checkWord(String sampleWord) {
-        return datastructure.contains(sampleWord);
+        return myDatastructure.contains(sampleWord);
     }
 }

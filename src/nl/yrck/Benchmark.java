@@ -101,7 +101,7 @@ public class Benchmark {
         // Benchmark alternative hasher
         for (int tableSize = 1; tableSize < (Util.countWordList(dictionaryList) * 2.5); tableSize += 50000) {
             DatastructureBuilder collisionChainingHashtableBuilder =
-                    new DatastructureBuilder(dictionaryList, new CollisionChainingDatastructure(new DefaultHasher(),
+                    new DatastructureBuilder(dictionaryList, new CollisionChainingDatastructure(new Djb2Hasher(),
                             tableSize));
             makePrintable(bufferedWriter, collisionChainingHashtableBuilder, ALTERNATIVEHASHER, tableSize);
         }
@@ -118,13 +118,13 @@ public class Benchmark {
         double[] timeResults = new double[sampleLists.length + 1];
         int currentFile;
         for (int i = 0; i < sampleLists.length; i++) {
-            int[] arrayResults = datastructureBuilder.timer(sampleLists[i]);
+            long[] arrayResults = datastructureBuilder.timer(sampleLists[i]);
             // Calculate words / ms
             double normalizedResult = (double) (Util.countWordList(sampleLists[i]) + 1) / (double) arrayResults[2];
             timeResults[i] = normalizedResult;
             currentFile = i + 1; // First file is count 1
             System.out.println("Status: " + datastructureBuilder.printName() + " file (" + currentFile +
-                    "/" + sampleLists.length + "); time: " + normalizedResult + "words/ms");
+                    "/" + sampleLists.length + "); time: " + normalizedResult + " words/ns");
         }
         double averageArray = Util.calculateAverage(timeResults);
         createCSVLine(writer, datastructureBuilder.printName(), hashtype, tableSize, averageArray);
@@ -159,22 +159,22 @@ public class Benchmark {
 
         for (Path sample : sampleLists) {
 
-            int[] arrayResults = arrayBuilder.timer(sample);
+            long[] arrayResults = arrayBuilder.timer(sample);
             displayResults(arrayBuilder.printName(), arrayResults, null);
 
-            int[] openaddressingResults = openAddressingHashtableBuilder.timer(sample);
+            long[] openaddressingResults = openAddressingHashtableBuilder.timer(sample);
             displayResults(openAddressingHashtableBuilder.printName(), openaddressingResults, hasher.printHasher());
 
-            int[] collisionchainingResults = collisionChainingHashtableBuilder.timer(sample);
+            long[] collisionchainingResults = collisionChainingHashtableBuilder.timer(sample);
             displayResults(collisionChainingHashtableBuilder.printName(), collisionchainingResults,
                     hasher.printHasher());
 
-            int[] trieResults = trieBuilder.timer(sample);
+            long[] trieResults = trieBuilder.timer(sample);
             displayResults(trieBuilder.printName(), trieResults, null);
         }
     }
 
-    private void displayResults(String dataType, int[] results, String hasher) {
+    private void displayResults(String dataType, long[] results, String hasher) {
         System.out.println(dataType);
         if (hasher != null) System.out.println(hasher);
         System.out.println(results[0] + " correct; " + results[1] + " incorrect");
