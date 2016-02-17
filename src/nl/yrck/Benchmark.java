@@ -148,14 +148,14 @@ public class Benchmark {
      * @param loadFactor  the factor determining when to resize the datastructure
      */
     public void benchmark(int initialSize, Hasher hasher, float loadFactor) {
-        DatastructureBuilder trieBuilder =
-                new DatastructureBuilder(dictionaryList, new TrieDatastructure());
         DatastructureBuilder arrayBuilder =
                 new DatastructureBuilder(dictionaryList, new ArrayDatastructure(initialSize));
         DatastructureBuilder openAddressingHashtableBuilder =
                 new DatastructureBuilder(dictionaryList, new OpenAddressingDatastructure(hasher, loadFactor));
         DatastructureBuilder collisionChainingHashtableBuilder =
                 new DatastructureBuilder(dictionaryList, new CollisionChainingDatastructure(hasher, initialSize));
+        DatastructureBuilder trieBuilder =
+                new DatastructureBuilder(dictionaryList, new TrieDatastructure());
 
         for (Path sample : sampleLists) {
 
