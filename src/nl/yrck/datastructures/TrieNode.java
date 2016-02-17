@@ -10,6 +10,7 @@ public class TrieNode {
     private char aChar;
     private TrieNode[] nextNodes;
     private int currentNextNodeCount;
+    private LinkedHashSlot linkedHashSlot;
 
     /**
      * Default constructor for a node in a Trie datastructure
@@ -26,6 +27,7 @@ public class TrieNode {
     public TrieNode(char aChar) {
         this.aChar = aChar;
         this.nextNodes = new TrieNode[255]; // Enough for all ascii characters
+        this.linkedHashSlot = new LinkedHashSlot(null);
     }
 
     /**
@@ -62,5 +64,30 @@ public class TrieNode {
     public void setNewNextNode(char aChar) {
         this.nextNodes[currentNextNodeCount] = new TrieNode(aChar);
         this.currentNextNodeCount += 1;
+    }
+
+    /**
+     * Saves the whole word to the final node. This can be done avoid false postives of shorter words
+     *
+     * @param key word to save
+     */
+    public void setFinal(String key) {
+        linkedHashSlot.setKey(key);
+        linkedHashSlot.setNextSlot(null);
+    }
+
+    /**
+     * Loops through a linked list to see if a word is contained in the chain
+     *
+     * @param key word to look for
+     * @return true when word is found
+     */
+    public boolean checkFinal(String key) {
+        while (linkedHashSlot.getKey() != null) {
+            if (linkedHashSlot.getKey().equals(key)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

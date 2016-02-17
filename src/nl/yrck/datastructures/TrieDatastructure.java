@@ -30,6 +30,9 @@ public class TrieDatastructure implements MyDatastructure {
             if (node == null) {
                 return false;
             }
+            if (key.length() == i + 1) {
+                return node.checkFinal(key);
+            }
         }
         return true;
     }
@@ -47,6 +50,9 @@ public class TrieDatastructure implements MyDatastructure {
                 node.setNewNextNode(key.charAt(i));
             }
             node = node.getNextNode(key.charAt(i));
+            if (key.length() == i + 1) {
+                node.setFinal(key);
+            }
         }
     }
 
