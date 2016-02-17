@@ -3,186 +3,192 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="919.5783333333334" y="138.0">nl.yrck.datastructures.ArrayDatastructure</node>
-    <node x="616.37" y="216.0">nl.yrck.datastructures.TrieDatastructure</node>
-    <node x="506.6041666666667" y="314.0">nl.yrck.Benchmark</node>
-    <node x="316.03666666666675" y="0.0">nl.yrck.datastructures.Hasher</node>
-    <node x="627.62" y="138.0">nl.yrck.datastructures.TrieNode</node>
-    <node x="0.0" y="387.0">nl.yrck.Util</node>
-    <node x="701.8700000000001" y="0.0">nl.yrck.datastructures.MyDatastructure</node>
-    <node x="193.5257142857143" y="138.0">nl.yrck.datastructures.DefaultHasher</node>
-    <node x="0.0" y="216.0">nl.yrck.datastructures.OpenAddressingDatastructure</node>
-    <node x="744.5783333333334" y="138.0">nl.yrck.DatastructureTimer</node>
-    <node x="335.52571428571434" y="138.0">nl.yrck.datastructures.LinkedHashSlot</node>
-    <node x="493.27571428571434" y="138.0">nl.yrck.datastructures.Djb2Hasher</node>
-    <node x="783.8283333333334" y="216.0">nl.yrck.DatastructureBuilder</node>
-    <node x="339.03666666666675" y="216.0">nl.yrck.datastructures.CollisionChainingDatastructure</node>
-    <node x="50.986666666666736" y="0.0">nl.yrck.datastructures.HashSlot</node>
+    <node x="664.4629720853857" y="264.0">nl.yrck.datastructures.TrieDatastructure</node>
+    <node x="1049.7129720853857" y="176.0">nl.yrck.datastructures.ArrayDatastructure</node>
+    <node x="508.9444376026273" y="362.0">nl.yrck.Benchmark</node>
+    <node x="303.7129720853858" y="78.0">nl.yrck.datastructures.Hasher</node>
+    <node x="675.7129720853857" y="176.0">nl.yrck.datastructures.TrieNode</node>
+    <node x="0.0" y="435.0">nl.yrck.Util</node>
+    <node x="745.5046387520524" y="78.0">nl.yrck.datastructures.MyDatastructure</node>
+    <node x="0.0" y="264.0">nl.yrck.datastructures.OpenAddressingDatastructure</node>
+    <node x="214.46297208538573" y="176.0">nl.yrck.datastructures.DefaultHasher</node>
+    <node x="875.7129720853857" y="176.0">nl.yrck.DatastructureTimer</node>
+    <node x="541.263013136289" y="78.0">nl.yrck.datastructures.LinkedHashSlot</node>
+    <node x="356.4629720853858" y="176.0">nl.yrck.datastructures.Djb2Hasher</node>
+    <node x="827.4629720853857" y="264.0">nl.yrck.DatastructureBuilder</node>
+    <node x="419.4629720853858" y="264.0">nl.yrck.datastructures.CollisionChainingDatastructure</node>
+    <node x="81.66297208538577" y="0.0">nl.yrck.datastructures.HashSlot</node>
   </nodes>
   <notes />
   <edges>
     <edge source="nl.yrck.datastructures.Djb2Hasher" target="nl.yrck.datastructures.Hasher">
       <point x="0.0" y="-14.0" />
-      <point x="545.7757142857143" y="48.0" />
-      <point x="383.41166666666675" y="48.0" />
-      <point x="28.875" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.TrieDatastructure" target="nl.yrck.datastructures.TrieNode">
-      <point x="-47.66666666666663" y="-14.0" />
-      <point x="640.2033333333334" y="196.0" />
-      <point x="649.62" y="196.0" />
-      <point x="-22.0" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.DefaultHasher">
-      <point x="89.19999999999999" y="-14.0" />
-      <point x="200.7" y="196.0" />
-      <point x="213.85904761904766" y="196.0" />
-      <point x="-40.66666666666666" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.ArrayDatastructure" target="nl.yrck.datastructures.MyDatastructure">
-      <point x="0.0" y="-14.0" />
-      <point x="995.5783333333334" y="98.0" />
-      <point x="826.5366666666669" y="98.0" />
-      <point x="56.66666666666674" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.CollisionChainingDatastructure" target="nl.yrck.datastructures.Hasher">
-      <point x="45.0" y="-14.0" />
-      <point x="496.53666666666675" y="196.0" />
-      <point x="482.77571428571434" y="196.0" />
-      <point x="482.77571428571434" y="58.0" />
-      <point x="364.16166666666675" y="58.0" />
+      <point x="408.9629720853858" y="136.0" />
+      <point x="351.8379720853858" y="136.0" />
       <point x="9.625" y="14.0" />
     </edge>
     <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.ArrayDatastructure">
-      <point x="43.714285714285666" y="-14.0" />
-      <point x="601.3184523809523" y="294.0" />
-      <point x="995.5783333333334" y="294.0" />
+      <point x="43.71428571428572" y="-14.0" />
+      <point x="603.6587233169131" y="342.0" />
+      <point x="1125.7129720853857" y="342.0" />
       <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.Hasher">
-      <point x="0.0" y="-14.0" />
-      <point x="111.5" y="196.0" />
-      <point x="106.17761904761909" y="196.0" />
-      <point x="106.17761904761909" y="78.0" />
-      <point x="325.66166666666675" y="78.0" />
-      <point x="-28.875" y="14.0" />
     </edge>
     <edge source="nl.yrck.DatastructureTimer" target="nl.yrck.datastructures.MyDatastructure">
       <point x="0.0" y="-14.0" />
-      <point x="821.5783333333334" y="118.0" />
-      <point x="781.2033333333334" y="118.0" />
-      <point x="11.333333333333371" y="14.0" />
+      <point x="952.7129720853857" y="146.0" />
+      <point x="847.5046387520524" y="146.0" />
+      <point x="34.0" y="14.0" />
     </edge>
-    <edge source="nl.yrck.datastructures.DefaultHasher" target="nl.yrck.datastructures.Hasher">
-      <point x="0.0" y="-14.0" />
-      <point x="254.5257142857143" y="88.0" />
-      <point x="344.91166666666675" y="88.0" />
-      <point x="-9.625" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.OpenAddressingDatastructure">
-      <point x="-43.71428571428578" y="-14.0" />
-      <point x="513.889880952381" y="294.0" />
-      <point x="111.5" y="294.0" />
-      <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.HashSlot">
-      <point x="-44.599999999999966" y="-14.0" />
-      <point x="66.90000000000003" y="196.0" />
-      <point x="87.92571428571438" y="196.0" />
-      <point x="87.92571428571438" y="118.0" />
-      <point x="94.98666666666674" y="118.0" />
-      <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.Benchmark" target="nl.yrck.DatastructureBuilder">
-      <point x="29.14285714285711" y="-14.0" />
-      <point x="586.7470238095239" y="284.0" />
-      <point x="865.3283333333334" y="284.0" />
-      <point x="0.0" y="14.0" />
+    <edge source="nl.yrck.datastructures.TrieNode" target="nl.yrck.datastructures.LinkedHashSlot">
+      <point x="-22.0" y="-14.0" />
+      <point x="697.7129720853857" y="136.0" />
+      <point x="621.263013136289" y="136.0" />
+      <point x="16.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.datastructures.CollisionChainingDatastructure" target="nl.yrck.datastructures.DefaultHasher">
       <point x="-90.0" y="-14.0" />
-      <point x="361.53666666666675" y="196.0" />
-      <point x="295.1923809523809" y="196.0" />
-      <point x="40.66666666666663" y="14.0" />
+      <point x="441.9629720853858" y="244.0" />
+      <point x="316.1296387520524" y="244.0" />
+      <point x="40.66666666666666" y="14.0" />
     </edge>
     <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.Djb2Hasher">
-      <point x="0.0" y="-14.0" />
-      <point x="557.6041666666667" y="264.0" />
-      <point x="575.2866666666667" y="264.0" />
-      <point x="575.2866666666667" y="186.0" />
-      <point x="545.7757142857143" y="186.0" />
+      <point x="-14.571428571428584" y="-14.0" />
+      <point x="545.3730090311988" y="322.0" />
+      <point x="408.9629720853858" y="322.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.datastructures.CollisionChainingDatastructure" target="nl.yrck.datastructures.MyDatastructure">
       <point x="90.0" y="-14.0" />
-      <point x="541.5366666666667" y="196.0" />
-      <point x="608.7757142857143" y="196.0" />
-      <point x="608.7757142857143" y="108.0" />
-      <point x="735.8700000000001" y="108.0" />
+      <point x="621.9629720853858" y="244.0" />
+      <point x="598.75" y="244.0" />
+      <point x="598.75" y="156.0" />
+      <point x="779.5046387520524" y="156.0" />
       <point x="-34.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.DatastructureBuilder" target="nl.yrck.datastructures.MyDatastructure">
-      <point x="40.75" y="-14.0" />
-      <point x="906.0783333333334" y="196.0" />
-      <point x="909.0783333333334" y="196.0" />
-      <point x="909.0783333333334" y="108.0" />
-      <point x="803.8700000000001" y="108.0" />
-      <point x="34.0" y="14.0" />
+      <point x="-40.75" y="-14.0" />
+      <point x="868.2129720853857" y="244.0" />
+      <point x="865.2129720853857" y="244.0" />
+      <point x="865.2129720853857" y="156.0" />
+      <point x="824.8379720853857" y="156.0" />
+      <point x="11.333333333333371" y="14.0" />
     </edge>
     <edge source="nl.yrck.datastructures.CollisionChainingDatastructure" target="nl.yrck.datastructures.LinkedHashSlot">
+      <point x="45.0" y="-14.0" />
+      <point x="576.9629720853858" y="244.0" />
+      <point x="587.75" y="244.0" />
+      <point x="587.75" y="136.0" />
+      <point x="589.263013136289" y="136.0" />
+      <point x="-16.0" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.TrieDatastructure" target="nl.yrck.datastructures.MyDatastructure">
+      <point x="47.66666666666666" y="-14.0" />
+      <point x="783.6296387520524" y="244.0" />
+      <point x="806.8046798029557" y="244.0" />
+      <point x="806.8046798029557" y="156.0" />
+      <point x="802.171305418719" y="156.0" />
+      <point x="-11.333333333333314" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.TrieDatastructure" target="nl.yrck.datastructures.TrieNode">
+      <point x="-47.66666666666663" y="-14.0" />
+      <point x="688.296305418719" y="244.0" />
+      <point x="697.7129720853857" y="244.0" />
+      <point x="-22.0" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.DefaultHasher">
+      <point x="89.20000000000005" y="-14.0" />
+      <point x="200.70000000000005" y="244.0" />
+      <point x="234.7963054187191" y="244.0" />
+      <point x="-40.66666666666666" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.ArrayDatastructure" target="nl.yrck.datastructures.MyDatastructure">
+      <point x="0.0" y="-14.0" />
+      <point x="1125.7129720853857" y="136.0" />
+      <point x="870.171305418719" y="136.0" />
+      <point x="56.666666666666686" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.CollisionChainingDatastructure" target="nl.yrck.datastructures.Hasher">
       <point x="-45.0" y="-14.0" />
-      <point x="406.53666666666675" y="196.0" />
-      <point x="367.52571428571434" y="196.0" />
-      <point x="-32.0" y="14.0" />
+      <point x="486.9629720853858" y="234.0" />
+      <point x="537.9629720853858" y="234.0" />
+      <point x="537.9629720853858" y="126.0" />
+      <point x="371.0879720853858" y="126.0" />
+      <point x="28.875" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.Hasher">
+      <point x="0.0" y="-14.0" />
+      <point x="111.5" y="244.0" />
+      <point x="118.66301313628907" y="244.0" />
+      <point x="118.66301313628907" y="126.0" />
+      <point x="313.3379720853858" y="126.0" />
+      <point x="-28.875" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.DefaultHasher" target="nl.yrck.datastructures.Hasher">
+      <point x="0.0" y="-14.0" />
+      <point x="275.46297208538573" y="136.0" />
+      <point x="332.5879720853858" y="136.0" />
+      <point x="-9.625" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.OpenAddressingDatastructure">
+      <point x="-43.71428571428572" y="-14.0" />
+      <point x="516.2301518883417" y="342.0" />
+      <point x="111.5" y="342.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.HashSlot">
+      <point x="-44.599999999999966" y="-14.0" />
+      <point x="66.90000000000003" y="234.0" />
+      <point x="107.66301313628907" y="234.0" />
+      <point x="107.66301313628907" y="53.0" />
+      <point x="125.66297208538577" y="53.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="nl.yrck.Benchmark" target="nl.yrck.DatastructureBuilder">
+      <point x="29.14285714285711" y="-14.0" />
+      <point x="589.0872947454844" y="332.0" />
+      <point x="908.9629720853857" y="332.0" />
+      <point x="0.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.DatastructureBuilder" target="nl.yrck.DatastructureTimer">
-      <point x="-40.75" y="-14.0" />
-      <point x="824.5783333333334" y="196.0" />
-      <point x="821.5783333333334" y="196.0" />
+      <point x="40.75" y="-14.0" />
+      <point x="949.7129720853857" y="244.0" />
+      <point x="952.7129720853857" y="244.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.CollisionChainingDatastructure">
-      <point x="-14.571428571428555" y="-14.0" />
-      <point x="543.0327380952381" y="274.0" />
-      <point x="451.53666666666675" y="274.0" />
+      <point x="0.0" y="-14.0" />
+      <point x="559.9444376026273" y="312.0" />
+      <point x="531.9629720853858" y="312.0" />
       <point x="0.0" y="14.0" />
-    </edge>
-    <edge source="nl.yrck.datastructures.TrieDatastructure" target="nl.yrck.datastructures.MyDatastructure">
-      <point x="47.66666666666663" y="-14.0" />
-      <point x="735.5366666666666" y="196.0" />
-      <point x="726.12" y="196.0" />
-      <point x="726.12" y="118.0" />
-      <point x="758.5366666666666" y="118.0" />
-      <point x="-11.333333333333371" y="14.0" />
     </edge>
     <edge source="nl.yrck.datastructures.LinkedHashSlot" target="nl.yrck.datastructures.HashSlot">
       <point x="0.0" y="-14.0" />
-      <point x="399.52571428571434" y="68.0" />
-      <point x="124.32000000000005" y="68.0" />
-      <point x="29.333333333333314" y="14.0" />
+      <point x="605.263013136289" y="53.0" />
+      <point x="154.9963054187191" y="53.0" />
+      <point x="29.33333333333333" y="14.0" />
     </edge>
     <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.DefaultHasher">
-      <point x="-29.14285714285711" y="-14.0" />
-      <point x="528.4613095238096" y="284.0" />
-      <point x="254.52571428571432" y="284.0" />
+      <point x="-29.142857142857167" y="-14.0" />
+      <point x="530.8015804597702" y="332.0" />
+      <point x="275.4629720853858" y="332.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.Benchmark" target="nl.yrck.datastructures.TrieDatastructure">
       <point x="14.571428571428555" y="-14.0" />
-      <point x="572.1755952380952" y="274.0" />
-      <point x="687.87" y="274.0" />
+      <point x="574.5158661740559" y="322.0" />
+      <point x="735.9629720853857" y="322.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="nl.yrck.datastructures.OpenAddressingDatastructure" target="nl.yrck.datastructures.MyDatastructure">
       <point x="44.60000000000002" y="-14.0" />
-      <point x="156.10000000000002" y="196.0" />
-      <point x="136.9276190476191" y="196.0" />
-      <point x="136.9276190476191" y="98.0" />
-      <point x="713.2033333333334" y="98.0" />
-      <point x="-56.66666666666663" y="14.0" />
+      <point x="156.10000000000002" y="244.0" />
+      <point x="159.05" y="244.0" />
+      <point x="159.05" y="146.0" />
+      <point x="756.8379720853857" y="146.0" />
+      <point x="-56.666666666666686" y="14.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.5000000000000004" x="535.9999999999999" y="207.49999999999994" />
+  <settings layout="Hierarchic Group" zoom="1.5000000000000004" x="601.0" y="231.49999999999997" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
